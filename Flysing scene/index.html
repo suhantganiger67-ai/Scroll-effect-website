@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flying Through — 3D Scroll</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- The 3D canvas: fixed behind everything -->
+  <canvas id="webgl"></canvas>
+
+  <!-- Text overlays that scroll on top of the 3D scene -->
+  <div class="overlay">
+    <section class="panel">
+      <h1>Enter</h1>
+      <p>Scroll to begin the journey</p>
+    </section>
+    <section class="panel">
+      <h2>Into the Void</h2>
+    </section>
+    <section class="panel">
+      <h2>Through the Nebula</h2>
+    </section>
+    <section class="panel">
+      <h2>Deep Space</h2>
+    </section>
+    <section class="panel">
+      <h2>Arrival</h2>
+    </section>
+  </div>
+
+  <!-- Invisible tall container that gives us scroll distance -->
+  <div id="scroll-container"></div>
+
+  <!-- Three.js as a module -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- GSAP (2 files) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- Our main script (module) -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

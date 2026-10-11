@@ -1,0 +1,68 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #050510;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- 3D Canvas (fixed, behind everything) ---------- */
+#webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: block;
+}
+
+/* ---------- Text overlays (above the canvas) ---------- */
+.overlay {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.panel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.panel h1 {
+  font-size: clamp(2.5rem, 9vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 40px rgba(150, 100, 255, 0.6);
+}
+
+.panel h2 {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
+}
+
+.panel p {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Scroll driver ---------- */
+#scroll-container {
+  height: 500vh;
+  pointer-events: none;
+}
